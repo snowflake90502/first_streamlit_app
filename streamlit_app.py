@@ -44,6 +44,4 @@ my_cur = my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
 my_data_row = my_cur.fetchone()
 streamlit.text("The fruit load list contains:")
-streamlit.text(my_data_row)
-
-client_session_keep_alive = "True"
+streamlit.dataframe(my_data_row)
